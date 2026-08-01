@@ -1,0 +1,30 @@
+# How to design DB Schema
+1. Design dbSchema for Booking.com
+2. Design DB Schema for Twitter
+
+# Keep in Mind
+1.Try to Insure that there is as less data duplicacy as possible (Data Redundancy as low as possible)
+2.Understand that 2 tables can be related & hence the queries will also be impacted
+3.Keep in mind actual real life apps
+
+# Design Booking.com
+
+Requirement Analysis
+* Owners of hotels should be able to list prop & rooms on the platform
+* Users can book a room of a hotels for a range of dates
+* Users might want to bookmark some hotels
+* Review Supports
+
+## Entities
+
+User has gives many reviews
+Hotels has got many reviews
+1.Users
+2.Hotels
+3.Review (Join Table)
+4.Booking (Join Table)
+5.Wishlist
+6.Rooms -> denote the Category if room
+
+How Room and hotel are related
+1 Hotel has many room
