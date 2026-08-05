@@ -1,9 +1,9 @@
 import express from 'express'
 const app = express()
-import welcomerouter from './routers/welcome.router.js';
 import {serverConfig} from './config/env.config.js';
+import V1Router from './routers/v1/index.router.js';
 
-app.use(welcomerouter)
+app.use('/api',V1Router)
 
 
 app.listen(serverConfig.PORT,()=>{
