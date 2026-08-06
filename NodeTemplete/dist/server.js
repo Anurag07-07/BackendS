@@ -1,10 +1,10 @@
-import express, {} from 'express';
+import express from 'express';
 const app = express();
-const PORT = 3000;
-app.get('/', (req, res) => {
-    res.send("<h1>Welcome Home</h1>");
-});
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:/${PORT}`);
+import { serverConfig } from './config/env.config.js';
+import V1Router from './routers/v1/index.router.js';
+app.use(express.json());
+app.use('/api', V1Router);
+app.listen(serverConfig.PORT, () => {
+    console.log(`Server started at http://localhost:${serverConfig.PORT}`);
 });
 //# sourceMappingURL=server.js.map
